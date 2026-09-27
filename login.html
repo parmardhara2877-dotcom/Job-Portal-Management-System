@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in - JobPortal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased flex flex-col">
+
+  <header class="h-16 flex items-center px-4 sm:px-6 border-b border-slate-200 bg-white">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-slate-900">
+      <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white grid place-items-center font-bold">J</span>
+      JobPortal
+    </a>
+  </header>
+
+  <main class="flex-1 grid place-items-center px-4 py-10">
+    <div class="w-full max-w-md">
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 sm:p-8">
+        <h1 class="text-2xl font-bold text-slate-900">Welcome back</h1>
+        <p class="text-slate-500 mt-1 text-sm">Log in to access your dashboard.</p>
+
+        <form id="login-form" class="mt-6 space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-semibold text-slate-700 mb-1">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email"
+              class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-semibold text-slate-700 mb-1">Password</label>
+            <input id="password" name="password" type="password" required autocomplete="current-password"
+              class="w-full rounded-lg border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+          </div>
+          <fieldset>
+            <legend class="block text-sm font-semibold text-slate-700 mb-1">Continue as</legend>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="role" value="seeker" class="peer sr-only" checked />
+                <span class="block rounded-lg border border-slate-300 px-3 py-2.5 text-center text-sm font-medium peer-checked:border-emerald-600 peer-checked:bg-emerald-50 peer-checked:text-emerald-700">Job Seeker</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="role" value="employer" class="peer sr-only" />
+                <span class="block rounded-lg border border-slate-300 px-3 py-2.5 text-center text-sm font-medium peer-checked:border-emerald-600 peer-checked:bg-emerald-50 peer-checked:text-emerald-700">Employer</span>
+              </label>
+            </div>
+          </fieldset>
+          <div id="login-message" class="text-sm"></div>
+          <button type="submit" id="login-btn" class="w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-white font-semibold hover:bg-emerald-700 transition">
+            Log in
+          </button>
+        </form>
+
+        <p class="mt-6 text-center text-sm text-slate-600">
+          Don't have an account? <a href="register.html" class="font-semibold text-emerald-700 hover:underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/auth.js"></script>
+  <script src="assets/login.js"></script>
+</body>
+</html>
